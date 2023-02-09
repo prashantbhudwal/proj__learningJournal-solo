@@ -10,7 +10,7 @@
     --br-radius-post: 0.2em;
 
     --fs--base: 1rem;
-    --fs-heading: 2rem;
+    --fs-heading: 1.5rem;
     --fw-heading: 700;
     --ls-heading: -0.03;
     --lh-base: 1.4;
@@ -32,10 +32,15 @@
 
 
 /* General Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0;
     margin: 0;
     font-family: var(--ff-primary);
+    font-size: var(--fs--base);
 }
 
 img {
@@ -43,13 +48,46 @@ img {
     width: 100%;
 }
 
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
 
-
-
+/* Header Component*/
+.header_container {
+    width: 100%;
+    display: flex;
+    height: 75px;
+    padding: 1.25em 1em;
+    padding-right: 2em;
+    gap: 0.75em;
+    align-items: center;
+    font-weight: var(--fw-heading);
+    font-family: var(--ff-Secondary);
+    margin-bottom: 2em;
+}
 
 .header__logo {
     background-image: url('./img/logo.png');
-    width: 100%;
-    max-width: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: var(--br-radius-post);
     background-size: cover;
+}
+
+.header__title {
+    margin-right: auto;
+    font-size: var(--fs-heading);
+    letter-spacing: var(--lh-base);
+}
+
+.nav__container {
+    display: flex;
+    gap: 2em;
+}
+
+.nav__item {
+    list-style: none;
 }
