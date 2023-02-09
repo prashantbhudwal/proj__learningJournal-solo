@@ -83,3 +83,5 @@ It is a project I am doing to polish my CSS skills.
     - How to display and format markdown dynamically?
 
 # Known Issues
+
+- BEM not consistent
