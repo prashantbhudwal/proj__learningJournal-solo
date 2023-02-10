@@ -142,7 +142,8 @@ h3 {
     flex-direction: column;
     justify-content: flex-end;
     gap: 0.5em;
-    padding: 1.5em 1em;
+    padding: 3vw 5vw;
+    /*TODO padding: clamp(10px, 10vw, 200px); */
 }
 
 .hero__summary {
