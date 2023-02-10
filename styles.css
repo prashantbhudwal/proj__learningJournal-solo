@@ -8,9 +8,9 @@
     --clr-gray-dark: #505050;
     --clr-gray-light: #D7D7D7;
     --br-radius-post: 0.2em;
-
-    --fs--base: 1rem;
-    --fs-heading: 1.5rem;
+    --fs-small: 0.8em;
+    --fs-base: 1rem;
+    --fs-heading: 1.2rem;
     --fw-heading: 700;
     --ls-heading: -0.03;
     --lh-base: 1.4;
@@ -21,7 +21,7 @@
 
 @media (min-width:700px) {
     :root {
-        --fs--base: 1.2rem;
+        --fs-base: 1.2rem;
         --fs-heading: 2.25rem;
         --ls-heading: -0.03;
         --lh-base: 1.6;
@@ -31,16 +31,23 @@
 }
 
 
+
 /* General Styles */
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
 }
 
 body {
     padding: 0;
     margin: 0;
     font-family: var(--ff-primary);
-    font-size: var(--fs--base);
+    font-size: var(--fs-base);
 }
 
 img {
@@ -55,6 +62,50 @@ h3 {
     margin: 0;
 }
 
+
+/* Layout */
+.app_container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main_container {
+    flex: 1 0 auto;
+}
+
+.homepage_container {}
+
+.header_container {}
+
+.recent_posts_container {}
+
+.post_container {}
+
+.article_container {}
+
+.about_container {}
+
+.footer_container {
+    background-color: var(--clr-black-400);
+    color: var(--clr-gray-light);
+}
+
+/* Utility Classes */
+.big-heading {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-heading);
+    font-family: var(--ff-Secondary);
+    letter-spacing: var(--ls-heading);
+}
+
+.date {
+    text-transform: uppercase;
+    font-size: var(--fs-small);
+    color: var(--clr-gray-light);
+}
+
+
 /* Header Component*/
 .header_container {
     width: 100%;
@@ -66,13 +117,12 @@ h3 {
     align-items: center;
     font-weight: var(--fw-heading);
     font-family: var(--ff-Secondary);
-    margin-bottom: 2em;
 }
 
 .header__logo {
     background-image: url('./img/logo.png');
-    width: 50px;
-    height: 50px;
+    min-width: 32px;
+    min-height: 32px;
     border-radius: var(--br-radius-post);
     background-size: cover;
 }
@@ -84,10 +134,35 @@ h3 {
 }
 
 .nav__container {
+    padding: 0;
     display: flex;
-    gap: 2em;
+    gap: 0.75em;
 }
 
 .nav__item {
     list-style: none;
 }
+
+
+/* Hero Post */
+
+.hero_container {
+    background: url('/img/article-image-hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5em;
+    padding: 1.5em 1em;
+}
+
+.hero__summary {
+    font-size: var(--fs--base);
+}
+
+
+/* Recent Posts */
