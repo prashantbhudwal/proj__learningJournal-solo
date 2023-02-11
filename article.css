@@ -1,0 +1,16 @@
+.article__content {
+    max-width: 700px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+}
+
+.article__headingOne {}
+
+.article__headingTwo {}
+
+.article__paragraphs {}
+
+.article__images {
+    width: 100%;
+    height: 100%;
+}

@@ -1,3 +1,5 @@
+# Product Management vs Prototype Management
+
 I have been fascinated with Product Management. Today, while on my learning journey, I realized something that has fundamentally changed my worldview about Product Management.
 
 **The realization is this - I am NOT fascinated with Product Management, I am fascinated with Prototype Management.**
