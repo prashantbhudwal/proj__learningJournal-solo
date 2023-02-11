@@ -85,3 +85,30 @@ It is a project I am doing to polish my CSS skills.
 # Known Issues
 
 - BEM not consistent
+
+# Possible flows
+
+## Post opened
+
+--> Post list rendered dynamically from data object
+--- Wait for user interaction ---
+--> Post opened (Link clicked)
+--> Post fetched and parsed based on link target
+--> Main container cleared with JS
+--> Post rendered in main container
+
+## About opened
+
+--> About content is stored as markdown
+--> About link clicked
+--> Markdown parsed
+--> Main container cleared
+--> About component displayed in main container; display: none --> block/flex --> toggled
+
+## Home opened
+
+--> Rendered by default, cleared when other links opened
+--> Hero rendered
+--> Recent posts rendered
+--> When home clicked
+--> display toggled
