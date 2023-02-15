@@ -7,17 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/node_modules/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/article.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="article_container">
-        <div class="article__content" id="article"></div>
-        <div class="recent_posts_container" id="recent_posts_container-article">
+    <div class="main_container" id="main-container">
+        <div class="article_container">
+            <div class="article__content" id="article"></div>
+            <div class="recent_posts_container" id="recent_posts_container-article">
+            </div>
         </div>
+        <div class="recent_posts_container" id="recent_posts_container"></div>
     </div>
+    <script src="./recentPosts.js" type="module"></script>
     <script src="./index.js" type="module"></script>
+    <script src="./header.js" type="module"></script>
+    <script src="./footer.js" type="module"></script>
 </body>
 
 </html>

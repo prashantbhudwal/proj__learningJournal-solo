@@ -1,10 +1,5 @@
 function addClasses() {}
 
-
-
-
-
-
 fetch("/posts/postOne.md")
   .then((response) => response.text())
   .then((markdown) => {
@@ -12,11 +7,9 @@ fetch("/posts/postOne.md")
     let html = marked.parse(markdown);
     const preview = document.getElementById("article");
     preview.innerHTML = html;
-    console.log(html);
     // Add dynamic classes to the HTML elements
     const h1Elements = preview.getElementsByTagName("h1");
     for (let i = 0; i < h1Elements.length; i++) {
-      console.log(h1Elements[i]);
       h1Elements[i].classList.add("article__headingOne");
     }
     const h2Elements = preview.getElementsByTagName("h2");
