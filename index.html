@@ -16,21 +16,9 @@
     <title>Document</title>
 </head>
 
-<body class="app_container">
-    <!-- Header Component -->
-    <header class="header_container">
-        <div class="header__logo">
-        </div>
-        <p class="header__title">My Learning Journal</p>
-        <nav class="header__nav">
-            <ul class="nav__container">
-                <li class="nav__home nav__item"><a href="/article.html">Home</a></li>
-                <li class="nav__about nav__item">About</li>
-            </ul>
-        </nav>
-    </header>
+<body class="app_container" id="app-container">
     <!-- Homepage -->
-    <div class="main_container">
+    <div class="main_container" id="main-container">
         <div class="hero_container">
             <p class="hero__date date">July 23, 2022</p>
             <h1 class="hero__heading big-heading">I am hero. My journey as a bootcamp student.</h1>
@@ -40,66 +28,12 @@
                 quos
                 ipsam earum.</p>
         </div>
-        <div class="recent_posts_container" id="recent_posts_container-homepage">
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-01.png" alt="">
-
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis,
-                    reiciendis maiores hic </p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <a href="#" class="view-more">View More</a>
-        </div>
+        <div class="recent_posts_container" id="recent_posts_container"></div>
     </div>
-
-    <!-- Footer Component -->
-    <footer class="footer_container">
-        <h2 class="footer__siteName big-heading">My Learning Journal</h2>
-        <p class="footer__copyrightText">Copyright 2023</p>
-    </footer>
-
-
-
+    <script src="./DOMElements.js" type="module"></script>
+    <script src="./header.js" type="module"></script>
+    <script src="./footer.js" type="module"></script>
+    <script src="./recentPosts.js" type="module"></script>
 </body>
 
 </html>
