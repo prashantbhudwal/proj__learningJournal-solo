@@ -8,10 +8,10 @@ const header = /*HTML*/ `
         <nav class="header__nav">
             <ul class="nav__container">
                 <li class="nav__home nav__item"><a href="/article.html">Home</a></li>
-                <li class="nav__about nav__item">About</li>
+                <li class="nav__about nav__item"><a href="/about.html">About</a></li>
             </ul>
         </nav>
-    </header>
+    </header>                                                   
 `;
 
 el.mainContainer.insertAdjacentHTML("afterbegin", header);
