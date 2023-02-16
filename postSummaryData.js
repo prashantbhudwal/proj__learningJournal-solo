@@ -1,7 +1,7 @@
 // These are GPT generated
 const postSummaries = [
   {
-    id: 001,
+    id: 1,
     title: "Prototype Management vs. Product Management",
     summary:
       "A comparison of two essential management roles that are critical to the success of a product in today's market.",
@@ -9,10 +9,10 @@ const postSummaries = [
     author: "Prashant",
     date: "2023-02-06",
     tags: ["product management", "prototype management", "leadership"],
-    image: "https://example.com/post-one-image.jpg",
+    image: "/img/article-image-01.png",
   },
   {
-    id: 002,
+    id: 2,
     title: "5 Tips for Effective Project Management",
     summary:
       "Learn the top 5 tips to help you manage your projects more effectively and ensure their successful completion.",
@@ -20,10 +20,10 @@ const postSummaries = [
     author: "Prashant",
     date: "2023-02-07",
     tags: ["project management", "productivity", "time management"],
-    image: "https://example.com/post-two-image.jpg",
+    image: "/img/article-image-02.png",
   },
   {
-    id: 003,
+    id: 3,
     title: "The Importance of User Experience in Design",
     summary:
       "User experience is an essential aspect of modern design. This post explores why it's so important and how to improve it.",
@@ -31,10 +31,10 @@ const postSummaries = [
     author: "Prashant",
     date: "2023-02-08",
     tags: ["user experience", "design", "usability"],
-    image: "https://example.com/post-three-image.jpg",
+    image: "/img/article-image-03.png",
   },
   {
-    id: 004,
+    id: 4,
     title: "How to Conduct Effective User Research",
     summary:
       "Effective user research is key to creating products that meet the needs of your users. Learn how to do it right.",
@@ -42,10 +42,10 @@ const postSummaries = [
     author: "Prashant",
     date: "2023-02-09",
     tags: ["user research", "product design", "market research"],
-    image: "https://example.com/post-four-image.jpg",
+    image: "/img/article-image-01.png",
   },
   {
-    id: 005,
+    id: 5,
     title: "10 Principles of Design Thinking",
     summary:
       "Design thinking is a powerful problem-solving approach used by successful businesses worldwide. Here are 10 key principles to keep in mind.",
@@ -53,10 +53,10 @@ const postSummaries = [
     author: "Prashant",
     date: "2023-02-10",
     tags: ["design thinking", "problem-solving", "innovation"],
-    image: "https://example.com/post-five-image.jpg",
+    image: "/img/article-image-02.png",
   },
   {
-    id: 006,
+    id: 6,
     title: "The Benefits of Agile Development",
     summary:
       "Agile development is a popular software development methodology that provides many benefits over traditional development methods. Learn more in this post.",
@@ -64,7 +64,7 @@ const postSummaries = [
     author: "Prashant",
     date: "2023-02-11",
     tags: ["agile development", "software development", "project management"],
-    image: "https://example.com/post-six-image.jpg",
+    image: "/img/article-image-03.png",
   },
 ];
 

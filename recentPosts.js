@@ -1,54 +1,30 @@
 import el from "./DOMElements.js";
-// <!-- Header Component -->
-const recentPosts = /*HTML*/ ` 
-    <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-01.png" alt="">
+import postSummaries from "./postSummaryData.js";
 
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis,
-                    reiciendis maiores hic </p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <div class="post_container">
-                <div class="post__thumbnail">
-                    <img src="./img/article-image-02.png" alt="">
-                </div>
-                <p class="post__date date">July 25, 2022</p>
-                <h1 class="post__heading big-heading">My new journey as a bootcamp student.</h1>
-                <p class="post__summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor
-                    nobis.</p>
-            </div>
-            <a href="#" class="view-more">View More</a>
-`;
+// <!-- RecentPosts Component -->
 
-el.recentContainer.insertAdjacentHTML("afterbegin", recentPosts);
+const transformDate = function (unformattedDate) {
+  const date = new Date(unformattedDate);
+  const formattedDate = date.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+  return formattedDate;
+};
+
+const getRecentPosts = function getRecentPostsHtml() {
+  const recentPostsHtml = postSummaries.map((post) => {
+    return /*HTML*/ `  <div class="post_container">
+                <div class="post__thumbnail">
+                    <img src=${post.image} alt="">
+                </div>
+                <p class="post__date date">${transformDate(post.date)}</p>
+                <h1 class="post__heading big-heading">${post.title}</h1>
+                <p class="post__summary">${post.summary}</p>
+            </div>`;
+  });
+  return recentPostsHtml;
+};
+
+el.recentContainer.insertAdjacentHTML("afterbegin", getRecentPosts());
