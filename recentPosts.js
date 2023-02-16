@@ -15,7 +15,7 @@ const transformDate = function (unformattedDate) {
 
 const getRecentPosts = function getRecentPostsHtml() {
   const recentPostsHtml = postSummaries.map((post) => {
-    return /*HTML*/ `  <div class="post_container">
+    return /*HTML*/ `  <div class="post_container" id="${post.id}">
                 <div class="post__thumbnail">
                     <img src=${post.image} alt="">
                 </div>
@@ -24,7 +24,20 @@ const getRecentPosts = function getRecentPostsHtml() {
                 <p class="post__summary">${post.summary}</p>
             </div>`;
   });
-  return recentPostsHtml;
+  return recentPostsHtml.join("");
 };
 
 el.recentContainer.insertAdjacentHTML("afterbegin", getRecentPosts());
+
+/*
+const articleLinks = document.querySelectorAll('.article-link');
+  articleLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault(); */
+
+const runThis = function (event) {
+  console.log(event.target);
+};
+
+const recentCards = document.querySelectorAll(".post_container");
+recentCards.forEach((card) => card.addEventListener("click", runThis));

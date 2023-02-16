@@ -5,8 +5,8 @@ fetch("/posts/postOne.md")
   .then((markdown) => {
     // Convert the markdown to HTML using marked.js
     let html = marked.parse(markdown);
-    const preview = document.getElementById("article");
-    preview.innerHTML = html;
+    const article = document.getElementById("article");
+    article.innerHTML = html;
     // Add dynamic classes to the HTML elements
     const h1Elements = preview.getElementsByTagName("h1");
     for (let i = 0; i < h1Elements.length; i++) {
