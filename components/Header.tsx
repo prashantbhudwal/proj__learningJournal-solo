@@ -8,7 +8,7 @@ export default function Header() {
         alt="Vercel Logo"
         className={"h-10 w-10 rounded-md object-cover"}
         width={100}
-        height={24}
+        height={100}
         priority
       />
 
