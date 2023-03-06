@@ -1,114 +1,38 @@
-# About
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is a basic blog website wih 3 pages.
+## Getting Started
 
-It is a project I am doing to polish my CSS skills.
+First, run the development server:
 
-# Design and Structure
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-- Design File: https://www.figma.com/file/hE5klIn1AEQ9XWZWmurs7y/Learning-Journal-Blog
-- - Site has 3 pages
-  - Homepage
-    - Top Article - Hero
-    - Recent Article - Grid
-  - Article Page
-    - Full Text
-    - Recent Posts
-  - About Page
-    - Image - Bio
-    - Recent Posts
-- Each page has a heder and a footer
-  - Header with logo, name and nav
-  - Footer with
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# Constraints
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Site should be made in vanilla HTML/CSS
-- Site should be responsive with one breakpoint
-  - Nav --> Hamburger
-- Site should use CSS Grid as much as possible
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-# Analysis
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-- Two general components are on all pages
-  - Header Component
-    - Logo
-    - SiteName
-    - <space-between>
-    - Home
-    - About Me
-  - Footer Component
-    - SiteName
-    - Copyright @202X
-- Homepage has 2 components
-  - Hero Component
-    - Displays Top Post
-  - RecentPostsGrid Component
-- Article page has 2 components
-  - Article Component
-  - RecentPostsGrid Component
-- About page has 2 components
-  - Bio Component
-  - RecentPostsGrid Component
-- One special component is on all pages
-  - RecentPostsGrid Component
-- RecentPostsGrid is made of
-  - Header: Recent Posts
-  - PostSummary Components
-- PostSummary Component is made of
-  - Post Date
-  - Post Thumbnail
-  - Post Title
-  - Post summary
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-# Plan
+## Learn More
 
-- Start with mobile design first.
-- Design all components
-- Render RecentPostsGrid with javascript
-- Store posts in markdown
-- Store PostSummary as an object in an array
-  - const postSummaryArray =
-    [{
-    date:"12 July, 2022",
-    title:"This Is It",
-    summary:"lorem...50"
-    thumbnailUrl:"/d/d/"
-    },
-    {}]
+To learn more about Next.js, take a look at the following resources:
 
-# Known Unknowns
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-    - How to make a grid responsive?
-    - How to display and format markdown dynamically?
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-# Known Issues
+## Deploy on Vercel
 
-- BEM not consistent
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-# Possible flows
-
-## Post opened
-
---> Post list rendered dynamically from data object
---- Wait for user interaction ---
---> Post opened (Link clicked)
---> Post fetched and parsed based on link target
---> Main container cleared with JS
---> Post rendered in main container
-
-## About opened
-
---> About content is stored as markdown
---> About link clicked
---> Markdown parsed
---> Main container cleared
---> About component displayed in main container; display: none --> block/flex --> toggled
-
-## Home opened
-
---> Rendered by default, cleared when other links opened
---> Hero rendered
---> Recent posts rendered
---> When home clicked
---> display toggled
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
