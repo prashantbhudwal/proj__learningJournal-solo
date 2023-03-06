@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -18,10 +19,10 @@ export default function Header() {
       <nav>
         <ul className="nav__container flex gap-5">
           <li className="nav__home nav__item">
-            <a href="/article.html">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li className="nav__about nav__item">
-            <a href="/about.html">About</a>
+            <Link href="/about">About</Link>
           </li>
         </ul>
       </nav>
