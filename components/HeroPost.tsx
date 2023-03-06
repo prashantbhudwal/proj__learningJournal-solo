@@ -7,7 +7,9 @@ export default function HeroPost({ date, title, summary, image }: any) {
 
   return (
     <main
-      className={"h-80 bg-cover bg-center bg-no-repeat text-white"}
+      className={
+        "flex h-80 flex-col justify-end gap-2 bg-cover bg-center bg-no-repeat px-4 py-4 text-white"
+      }
       style={{ backgroundImage: `url('/${image}')` }}
     >
       <p className="">{formattedDate}</p>
