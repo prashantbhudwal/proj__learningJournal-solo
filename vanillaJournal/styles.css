@@ -91,6 +91,7 @@ h3 {
 
 
 /* Header Component*/
+/* Done */
 .header_container {
     width: 100%;
     display: flex;
@@ -111,7 +112,8 @@ h3 {
     background-size: cover;
 }
 
-.header__title {
+/* Done */
+.header__title { 
     margin-right: auto;
     font-size: var(--fs-heading);
     letter-spacing: var(--lh-base);
