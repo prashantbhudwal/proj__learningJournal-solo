@@ -6,13 +6,17 @@ import PostCard from "@/components/PostCard";
 const inter = Inter({ subsets: ["latin"] });
 
 import postSummaries from "@/data/postSummaryData";
+import Stack from "@/components/Stack";
 
 export default function Home() {
+  const cards = postSummaries.map((post) => (
+    <PostCard {...post} key={post.id} />
+  ));
+
   return (
     <div>
       <HeroPost {...postSummaries[0]} />
-      <PostCard {...postSummaries[0]} />
-      <PostCard {...postSummaries[2]} />
+      <Stack>{cards}</Stack>
     </div>
   );
 }
