@@ -1,9 +1,7 @@
+import formatDate from "@/utils/formatDate";
+
 export default function HeroPost({ date, title, summary, image }: any) {
-  const formattedDate = new Date(date).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
+  const formattedDate = formatDate(date);
 
   return (
     <main
