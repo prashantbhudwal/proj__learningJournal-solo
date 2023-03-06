@@ -9,7 +9,7 @@ const postSummaries = [
     author: "Prashant",
     date: "2023-02-06",
     tags: ["product management", "prototype management", "leadership"],
-    image: "article-image-01.png",
+    image: "article-image-hero.png",
   },
   {
     id: 2,
