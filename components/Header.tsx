@@ -1,8 +1,8 @@
 export default function Header() {
   return (
-    <header className="flex items-center w-full h-75 px-5 py-5 gap-2 font-bold text-gray-800 shadow-sm">
+    <header className="h-75 flex w-full items-center gap-2 px-5 py-5 font-bold text-gray-800 shadow-sm">
       <div className="header__logo"></div>
-      <p className="text-2xl mr-auto tracking-tight">My Learning Journal</p>
+      <p className="mr-auto text-2xl tracking-tight">My Learning Journal</p>
       <nav className="header__nav">
         <ul className="nav__container flex gap-5">
           <li className="nav__home nav__item">
